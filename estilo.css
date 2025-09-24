@@ -1,0 +1,157 @@
+/* Layout base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "header header"
+    "search sidebar"
+    "main sidebar"
+    "footer footer";
+}
+
+/* Header (logo) */
+header {
+  grid-area: header;
+  background-color: #feb7100e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  min-height: 256px; /* ajuste de altura do logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img {
+  height: 256px;
+}
+
+/* Barra de busca */
+nav.search {
+  grid-area: search;
+  background: #3498db;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.search input {
+  width: 70%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+nav.search a {
+  margin-left: 5px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+main {
+  grid-area: main;
+  padding: 20px;
+}
+section {
+  margin-bottom: 20px;
+}
+section h2 {
+  margin-top: 0;
+  padding: 10px;
+  background: #06968d;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Cards de artigos */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+.card {
+  background: #ecf0f1;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 25%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+.card p {
+  flex-grow: 1;
+  color: #555;
+}
+.card a {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.card a:hover {
+  background: #1f6391;
+}
+
+/* Sidebar */
+aside {
+  grid-area: sidebar;
+  background: #dfe6e9;
+  padding: 20px;
+  border-left: 2px solid #ccc;
+}
+
+/* Rodapé */
+footer {
+  grid-area: footer;
+  background: #3498db;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "search"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  nav.search {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.search input {
+    width: 100%;
+  }
+
+  aside {
+    border-left: none;
+    border-top: 2px solid #ccc;
+  }
+}

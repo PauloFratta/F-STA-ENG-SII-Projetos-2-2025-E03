@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAOLHO DIGITAL - Login</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="logar.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/LOGO.svg" alt="Logo">
+    </header>
+
+    <nav class="search">
+        <input type="text" placeholder="Barra de busca">
+        <div>
+            <a href="https://www.google.com">Pesquisar</a>
+            <a href="index.html">Voltar</a>
+            <a href="https://lista.mercadolivre.com.br/jogo-perfil">Perfil</a>
+        </div>
+    </nav>
+
+    <main class="form-container">
+        <div class="form-wrapper" id="formWrapper">
+            <form id="loginForm" class="form-box" action="/login" method="POST">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="email" id="login-email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-senha" name="senha" placeholder="Senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+                
+            </form>
+
+            <form id="cadastroForm" class="form-box hidden" action="/cadastro" method="POST">
+                <h2>Criar uma conta</h2>
+                <div class="input-group">
+                    <input type="text" id="cadastro-nome" name="nome" placeholder="Nome de Usuário" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="cadastro-email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="cadastro-senha" name="senha" placeholder="Senha" required>
+                </div>
+                <button type="submit">Cadastrar</button>
+                
+            </form>
+        </div>
+    </main>
+
+    <aside>
+        <h3>Espaço para anúncios</h3>
+        <p>Aqui podemos inserir propagandas e afins.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; Equipe 3 SISTEMAS EMBARCADOS 4 - 2025</p>
+    </footer>
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('loginForm');
+            const cadastroForm = document.getElementById('cadastroForm');
+            loginForm.classList.toggle('hidden');
+            cadastroForm.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

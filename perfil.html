@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAOLHO DIGITAL - Perfil</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/LOGO.svg" alt="Logo">
+    </header>
+    
+    <main>
+        <section id="profile-info">
+            <div class="profile-header">
+                <h2 id="titulo-perfil">Carregando...</h2>
+                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-picture-area">
+                    <img id="user-photo" class="profile-photo" src="imagens/Artigo TapaBuraco.gif" alt="Foto do Perfil">
+                    <button id="editar-foto-btn" class="btn btn-edit">Editar Foto</button>
+                </div>
+
+                <div class="profile-details">
+                    <h3 id="user-name">Carregando...</h3>
+                    <p id="user-bio">Nenhuma bio definida.</p>
+                    <button id="editar-bio-btn" class="btn btn-edit">Editar Bio</button>
+                </div>
+            </div>
+
+            <button id="logout-button" class="btn btn-logout">Sair (Logout)</button>
+        </section>
+
+        <section id="user-articles">
+            <h2>Meus Artigos</h2>
+            <div class="cards">
+                <p>Nenhum artigo publicado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Equipe 3 SISTEMAS EMBARCADOS 4-2025</p>
+    </footer>
+
+    <script src="perfil-script.js"></script>
+</body>
+</html>
